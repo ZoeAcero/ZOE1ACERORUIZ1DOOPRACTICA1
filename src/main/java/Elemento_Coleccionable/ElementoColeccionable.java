@@ -8,4 +8,9 @@ public class ElementoColeccionable {
     private String unidadMonetaria;
     private int rareza;
     private double precio;
+
+    public ElementoColeccionable(String pais, String autoridadGobernante, int annus, double valor, String unidadMonetaria, int rareza, double precio) {
+        if (rareza < 1 || rareza > 100) {
+            throw new IllegalArgumentException("El índice de rareza debe estar entre 1 y 100.");
+        }
 }
