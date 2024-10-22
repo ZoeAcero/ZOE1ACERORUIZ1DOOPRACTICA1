@@ -46,4 +46,37 @@ public class ElementoColeccionable {
     public void setAnnus(int annus) {
         this.annus = annus;
     }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getUnidadMonetaria() {
+        return unidadMonetaria;
+    }
+
+    public void setUnidadMonetaria(String unidadMonetaria) {
+        this.unidadMonetaria = unidadMonetaria;
+    }
+
+    public int getRareza() {
+        return rareza;
+    }
+
+    public void setRareza(int rareza) {
+        this.rareza = rareza;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+    
 }
