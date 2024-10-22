@@ -13,4 +13,12 @@ public class ElementoColeccionable {
         if (rareza < 1 || rareza > 100) {
             throw new IllegalArgumentException("El índice de rareza debe estar entre 1 y 100.");
         }
+        this.pais = pais;
+        this.autoridadGobernante = autoridadGobernante;
+        this.annus = annus;
+        this.valor = valor;
+        this.unidadMonetaria = unidadMonetaria;
+        this.rareza = rareza;
+        this.precio = precio;
+    }
 }
