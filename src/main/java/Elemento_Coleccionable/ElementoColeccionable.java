@@ -21,4 +21,29 @@ public class ElementoColeccionable {
         this.rareza = rareza;
         this.precio = precio;
     }
+
+    // Getters y Setters
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public String getAutoridadGobernante() {
+        return autoridadGobernante;
+    }
+
+    public void setAutoridadGobernante(String autoridadGobernante) {
+        this.autoridadGobernante = autoridadGobernante;
+    }
+
+    public int getAnnus() {
+        return annus;
+    }
+
+    public void setAnnus(int annus) {
+        this.annus = annus;
+    }
 }
