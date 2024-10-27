@@ -33,4 +33,12 @@ public class coleccion {
             }
         }
     }
+
+    public double obtenerPrecioTotal() {
+        double total = 0;
+        for (ElementoColeccionable elemento : elementos) {
+            total += elemento.getPrecio();
+        }
+        return total;
+    }
 }
