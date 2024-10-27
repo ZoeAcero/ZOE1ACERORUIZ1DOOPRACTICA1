@@ -25,4 +25,12 @@ public class coleccion {
             }
         }
     }
+
+    public void mostrarSellos() {
+        for (ElementoColeccionable elemento : elementos) {
+            if (elemento instanceof Sello) {
+                System.out.println(elemento);
+            }
+        }
+    }
 }
