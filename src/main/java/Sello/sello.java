@@ -26,4 +26,12 @@ public class sello extends ElementoColeccionable{
     public void setAltura(double altura) {
         this.altura = altura;
     }
+
+    public double getAnchura() {
+        return anchura;
+    }
+
+    public void setAnchura(double anchura) {
+        this.anchura = anchura;
+    }
 }
