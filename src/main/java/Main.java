@@ -53,10 +53,37 @@ public class Main {
                     EstadoConservacionMoneda estadoConservacionMoneda = EstadoConservacionMoneda.valueOf(estadoConservacionMonedaStr);
 
                     moneda nuevaMoneda = new moneda(paisMoneda, autoridadGobernanteMoneda, annusMoneda, valorMoneda, unidadMonetariaMoneda, rarezaMoneda, precioMoneda, composicionMoneda, pesoMoneda, diametroMoneda, grosorMoneda, estadoConservacionMoneda);
-                    coleccion.anadirMoneda(nuevamoneda);
+                    coleccion.anadirMoneda(nuevaMoneda);
                     System.out.println("Moneda añadida con éxito.");
                     break;
                 case 2:
+                    System.out.print("Ingrese el país: ");
+                    String paisSello = scanner.next();
+                    System.out.print("Ingrese la autoridad gobernante: ");
+                    String autoridadGobernanteSello = scanner.next();
+                    System.out.print("Ingrese el año: ");
+                    int annusSello = scanner.nextInt();
+                    System.out.print("Ingrese el valor: ");
+                    double valorSello = scanner.nextDouble();
+                    System.out.print("Ingrese la unidad monetaria: ");
+                    String unidadMonetariaSello = scanner.next();
+                    System.out.print("Ingrese la rareza (1-100): ");
+                    int rarezaSello = scanner.nextInt();
+                    System.out.print("Ingrese el precio: ");
+                    double precioSello = scanner.nextDouble();
+                    System.out.print("Ingrese la altura: ");
+                    double alturaSello = scanner.nextDouble();
+                    System.out.print("Ingrese la anchura: ");
+                    double anchuraSello = scanner.nextDouble();
+                    System.out.print("Ingrese la imagen: ");
+                    String imagenSello = scanner.next();
+                    System.out.print("Ingrese el estado de conservación (U, NSG, NF, N): ");
+                    String estadoConservacionSelloStr = scanner.next();
+                    EstadoConservacionSello estadoConservacionSello = EstadoConservacionSello.valueOf(estadoConservacionSelloStr);
+
+                    sello nuevoSello = new sello(paisSello, autoridadGobernanteSello, annusSello, valorSello, unidadMonetariaSello, rarezaSello, precioSello, alturaSello, anchuraSello, imagenSello, estadoConservacionSello);
+                    coleccion.anadirSello(nuevoSello);
+                    System.out.println("Sello añadido con éxito.");
                     break;
                 case 3:
                     coleccion.mostrarMonedas();
