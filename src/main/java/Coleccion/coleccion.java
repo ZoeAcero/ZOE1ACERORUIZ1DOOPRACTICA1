@@ -41,4 +41,12 @@ public class coleccion {
         }
         return total;
     }
+
+    public double obtenerRarezaMedia() {
+        double totalRareza = 0;
+        for (ElementoColeccionable elemento : elementos) {
+            totalRareza += elemento.getRareza();
+        }
+        return totalRareza / elementos.size();
+    }
 }
