@@ -1,6 +1,6 @@
 package Moneda;
 import Elemento_Coleccionable.ElementoColeccionable;
-
+import Enums.EstadoConservacionMoneda;
 public class moneda extends ElementoColeccionable {
     private String composicion;
     private double peso;
