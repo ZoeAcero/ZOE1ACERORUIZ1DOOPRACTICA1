@@ -13,4 +13,16 @@ public class coleccion {
     public void anadirMoneda(Moneda moneda) {
         elementos.add(moneda);
     }
+
+    public void anadirSello(Sello sello) {
+        elementos.add(sello);
+    }
+
+    public void mostrarMonedas() {
+        for (ElementoColeccionable elemento : elementos) {
+            if (elemento instanceof Moneda) {
+                System.out.println(elemento);
+            }
+        }
+    }
 }
