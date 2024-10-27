@@ -51,4 +51,12 @@ public class moneda extends ElementoColeccionable {
         this.grosor = grosor;
     }
 
+    public EstadoConservacionMoneda getEstadoConservacion() {
+        return estadoConservacion;
+    }
+
+    public void setEstadoConservacion(EstadoConservacionMoneda estadoConservacion) {
+        this.estadoConservacion = estadoConservacion;
+    }
+
 }
