@@ -47,4 +47,7 @@ public class Main {
                 default:
                     System.out.println("Opción no válida.");
             }
+        } while (opcion != 0);
+
+        scanner.close();
 }
