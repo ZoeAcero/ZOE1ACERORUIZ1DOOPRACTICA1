@@ -23,4 +23,8 @@ public class Main {
             System.out.println("0-Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    break;
 }
