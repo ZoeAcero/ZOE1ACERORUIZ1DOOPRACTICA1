@@ -43,4 +43,12 @@ public class moneda extends ElementoColeccionable {
         this.diametro = diametro;
     }
 
+    public double getGrosor() {
+        return grosor;
+    }
+
+    public void setGrosor(double grosor) {
+        this.grosor = grosor;
+    }
+
 }
