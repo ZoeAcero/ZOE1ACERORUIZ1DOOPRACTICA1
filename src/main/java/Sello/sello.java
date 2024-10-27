@@ -18,4 +18,12 @@ public class sello extends ElementoColeccionable{
     }
 
     // Getters y Setters
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
 }
