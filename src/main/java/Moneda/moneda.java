@@ -27,4 +27,12 @@ public class moneda extends ElementoColeccionable {
         this.composicion = composicion;
     }
 
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
 }
