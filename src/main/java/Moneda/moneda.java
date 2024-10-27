@@ -1,7 +1,10 @@
 package Moneda;
-
-import Elemento_Coleccionable.ElementoColeccionable;package Elemento_Coleccionable;
+import ElementoColeccionable;
 
 public class moneda extends ElementoColeccionable {
-    
+    private String composicion;
+    private double peso;
+    private double diametro;
+    private double grosor;
+    private EstadoConservacionMoneda estadoConservacion;
 }
