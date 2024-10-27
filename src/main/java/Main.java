@@ -27,4 +27,7 @@ public class Main {
             switch (opcion) {
                 case 1:
                     break;
+                case 2:
+                    break;
+                case 3:
 }
