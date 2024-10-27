@@ -26,6 +26,35 @@ public class Main {
 
             switch (opcion) {
                 case 1:
+                    System.out.print("Ingrese el país: ");
+                    String paisMoneda = scanner.next();
+                    System.out.print("Ingrese la autoridad gobernante: ");
+                    String autoridadGobernanteMoneda = scanner.next();
+                    System.out.print("Ingrese el año: ");
+                    int annusMoneda = scanner.nextInt();
+                    System.out.print("Ingrese el valor: ");
+                    double valorMoneda = scanner.nextDouble();
+                    System.out.print("Ingrese la unidad monetaria: ");
+                    String unidadMonetariaMoneda = scanner.next();
+                    System.out.print("Ingrese la rareza (1-100): ");
+                    int rarezaMoneda = scanner.nextInt();
+                    System.out.print("Ingrese el precio: ");
+                    double precioMoneda = scanner.nextDouble();
+                    System.out.print("Ingrese la composición: ");
+                    String composicionMoneda = scanner.next();
+                    System.out.print("Ingrese el peso: ");
+                    double pesoMoneda = scanner.nextDouble();
+                    System.out.print("Ingrese el diámetro: ");
+                    double diametroMoneda = scanner.nextDouble();
+                    System.out.print("Ingrese el grosor: ");
+                    double grosorMoneda = scanner.nextDouble();
+                    System.out.print("Ingrese el estado de conservación (G, VG, F, VF, XF, AU, UNC): ");
+                    String estadoConservacionMonedaStr = scanner.next();
+                    EstadoConservacionMoneda estadoConservacionMoneda = EstadoConservacionMoneda.valueOf(estadoConservacionMonedaStr);
+
+                    moneda nuevaMoneda = new moneda(paisMoneda, autoridadGobernanteMoneda, annusMoneda, valorMoneda, unidadMonetariaMoneda, rarezaMoneda, precioMoneda, composicionMoneda, pesoMoneda, diametroMoneda, grosorMoneda, estadoConservacionMoneda);
+                    coleccion.anadirMoneda(nuevamoneda);
+                    System.out.println("Moneda añadida con éxito.");
                     break;
                 case 2:
                     break;
