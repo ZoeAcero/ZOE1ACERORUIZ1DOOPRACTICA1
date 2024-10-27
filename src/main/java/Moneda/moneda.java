@@ -1,5 +1,5 @@
 package Moneda;
-import ElementoColeccionable;
+import Elemento_Coleccionable.ElementoColeccionable;
 
 public class moneda extends ElementoColeccionable {
     private String composicion;
