@@ -34,4 +34,12 @@ public class sello extends ElementoColeccionable{
     public void setAnchura(double anchura) {
         this.anchura = anchura;
     }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
 }
