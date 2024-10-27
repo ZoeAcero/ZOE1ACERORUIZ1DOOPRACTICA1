@@ -30,4 +30,21 @@ public class Main {
                 case 2:
                     break;
                 case 3:
+                    coleccion.mostrarMonedas();
+                    break;
+                case 4:
+                    coleccion.mostrarSellos();
+                    break;
+                case 5:
+                    System.out.println("Precio total de la colección: " + coleccion.obtenerPrecioTotal());
+                    break;
+                case 6:
+                    System.out.println("Rareza media de la colección: " + coleccion.obtenerRarezaMedia());
+                    break;
+                case 0:
+                    System.out.println("Saliendo...");
+                    break;
+                default:
+                    System.out.println("Opción no válida.");
+            }
 }
