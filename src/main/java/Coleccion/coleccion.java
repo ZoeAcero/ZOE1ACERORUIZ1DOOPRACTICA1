@@ -2,6 +2,8 @@ package Coleccion;
 import java.util.ArrayList;
 import java.util.List;
 import Elemento_Coleccionable.ElementoColeccionable;
+import Moneda.moneda;
+import Sello.sello;
 
 public class coleccion {
     private List<ElementoColeccionable> elementos;
@@ -10,17 +12,17 @@ public class coleccion {
         this.elementos = new ArrayList<>();
     }
 
-    public void anadirMoneda(Moneda moneda) {
+    public void anadirMoneda(moneda moneda) {
         elementos.add(moneda);
     }
 
-    public void anadirSello(Sello sello) {
+    public void anadirSello(sello sello) {
         elementos.add(sello);
     }
 
     public void mostrarMonedas() {
         for (ElementoColeccionable elemento : elementos) {
-            if (elemento instanceof Moneda) {
+            if (elemento instanceof moneda) {
                 System.out.println(elemento);
             }
         }
@@ -28,7 +30,7 @@ public class coleccion {
 
     public void mostrarSellos() {
         for (ElementoColeccionable elemento : elementos) {
-            if (elemento instanceof Sello) {
+            if (elemento instanceof sello) {
                 System.out.println(elemento);
             }
         }
