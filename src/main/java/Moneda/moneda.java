@@ -35,4 +35,12 @@ public class moneda extends ElementoColeccionable {
         this.peso = peso;
     }
 
+    public double getDiametro() {
+        return diametro;
+    }
+
+    public void setDiametro(double diametro) {
+        this.diametro = diametro;
+    }
+
 }
