@@ -42,4 +42,12 @@ public class sello extends ElementoColeccionable{
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
+
+    public EstadoConservacionSello getEstadoConservacion() {
+        return estadoConservacion;
+    }
+
+    public void setEstadoConservacion(EstadoConservacionSello estadoConservacion) {
+        this.estadoConservacion = estadoConservacion;
+    }
 }
