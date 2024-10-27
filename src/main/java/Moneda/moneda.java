@@ -19,5 +19,12 @@ public class moneda extends ElementoColeccionable {
 
     // Getters y Setters
 
-    
+    public String getComposicion() {
+        return composicion;
+    }
+
+    public void setComposicion(String composicion) {
+        this.composicion = composicion;
+    }
+
 }
