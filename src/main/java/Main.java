@@ -24,7 +24,7 @@ public class Main {
             System.out.println("0-Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // Consume the newline
 
             switch (opcion) {
                 case 1:
@@ -35,10 +35,12 @@ public class Main {
                         String autoridadGobernanteMoneda = scanner.nextLine();
                         System.out.print("Ingrese el año: ");
                         int annusMoneda = scanner.nextInt();
-                        System.out.print("Ingrese el valor: ");
-                        double valorMoneda = scanner.nextDouble();
+                        scanner.nextLine(); // Consume the newline
+                        System.out.print("Ingrese el valor (e.g., 10€): ");
+                        String valorMonedaStr = scanner.nextLine();
+                        double valorMoneda = Double.parseDouble(valorMonedaStr.replaceAll("[^\\d.]", ""));
                         System.out.print("Ingrese la unidad monetaria: ");
-                        String unidadMonetariaMoneda = scanner.next();
+                        String unidadMonetariaMoneda = scanner.nextLine();
                         System.out.print("Ingrese la rareza (1-100): ");
                         int rarezaMoneda = scanner.nextInt();
                         System.out.print("Ingrese el precio: ");
@@ -63,7 +65,7 @@ public class Main {
                         System.out.println("Moneda añadida con éxito.");
                     } catch (InputMismatchException e) {
                         System.out.println("Error: Entrada inválida. Por favor, ingrese los datos correctamente.");
-                        scanner.next();
+                        scanner.next(); // Clear the invalid input
                     }
                     break;
                 case 2:
@@ -74,10 +76,12 @@ public class Main {
                         String autoridadGobernanteSello = scanner.nextLine();
                         System.out.print("Ingrese el año: ");
                         int annusSello = scanner.nextInt();
-                        System.out.print("Ingrese el valor: ");
-                        double valorSello = scanner.nextDouble();
+                        scanner.nextLine(); // Consume the newline
+                        System.out.print("Ingrese el valor (e.g., 10€): ");
+                        String valorSelloStr = scanner.nextLine();
+                        double valorSello = Double.parseDouble(valorSelloStr.replaceAll("[^\\d.]", ""));
                         System.out.print("Ingrese la unidad monetaria: ");
-                        String unidadMonetariaSello = scanner.next();
+                        String unidadMonetariaSello = scanner.nextLine();
                         System.out.print("Ingrese la rareza (1-100): ");
                         int rarezaSello = scanner.nextInt();
                         System.out.print("Ingrese el precio: ");
@@ -97,7 +101,7 @@ public class Main {
                         System.out.println("Sello añadido con éxito.");
                     } catch (InputMismatchException e) {
                         System.out.println("Error: Entrada inválida. Por favor, ingrese los datos correctamente.");
-                        scanner.next();
+                        scanner.next(); // Clear the invalid input
                     }
                     break;
                 case 3:
