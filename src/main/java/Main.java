@@ -6,7 +6,6 @@ import Enums.EstadoConservacionMoneda;
 import Enums.EstadoConservacionSello;
 import java.util.InputMismatchException;
 
-
 public class Main {
     public static void main(String[] args) {
         coleccion coleccion = new coleccion();
@@ -45,8 +44,9 @@ public class Main {
                         double precioMoneda = scanner.nextDouble();
                         System.out.print("Ingrese la composición: ");
                         String composicionMoneda = scanner.next();
-                        System.out.print("Ingrese el peso: ");
-                        double pesoMoneda = scanner.nextDouble();
+                        System.out.print("Ingrese el peso (e.g., 5kg): ");
+                        String pesoMonedaStr = scanner.next();
+                        double pesoMoneda = Double.parseDouble(pesoMonedaStr.replaceAll("[^\\d.]", ""));
                         System.out.print("Ingrese el diámetro: ");
                         double diametroMoneda = scanner.nextDouble();
                         System.out.print("Ingrese el grosor: ");
@@ -94,7 +94,7 @@ public class Main {
                         System.out.println("Sello añadido con éxito.");
                     } catch (InputMismatchException e) {
                         System.out.println("Error: Entrada inválida. Por favor, ingrese los datos correctamente.");
-                        scanner.next(); // Clear the invalid input
+                        scanner.next();
                     }
                     break;
                 case 3:
