@@ -2,14 +2,14 @@ import java.util.Scanner;
 import Coleccion.coleccion;
 import Moneda.moneda;
 import Sello.sello;
-import Enums.*;
+import Enums.EstadoConservacionMoneda;
+import Enums.EstadoConservacionSello;
 
 public class Main {
     public static void main(String[] args) {
         coleccion coleccion = new coleccion();
         Scanner scanner = new Scanner(System.in);
         int opcion;
-
 
         do {
             System.out.println("Menú:");
