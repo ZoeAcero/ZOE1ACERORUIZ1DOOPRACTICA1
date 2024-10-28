@@ -6,6 +6,7 @@ import Enums.EstadoConservacionMoneda;
 import Enums.EstadoConservacionSello;
 import java.util.InputMismatchException;
 
+
 public class Main {
     public static void main(String[] args) {
         coleccion coleccion = new coleccion();
@@ -23,7 +24,7 @@ public class Main {
             System.out.println("0-Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -47,10 +48,12 @@ public class Main {
                         System.out.print("Ingrese el peso (e.g., 5kg): ");
                         String pesoMonedaStr = scanner.next();
                         double pesoMoneda = Double.parseDouble(pesoMonedaStr.replaceAll("[^\\d.]", ""));
-                        System.out.print("Ingrese el diámetro: ");
-                        double diametroMoneda = scanner.nextDouble();
-                        System.out.print("Ingrese el grosor: ");
-                        double grosorMoneda = scanner.nextDouble();
+                        System.out.print("Ingrese el diámetro (e.g., 10cm): ");
+                        String diametroMonedaStr = scanner.next();
+                        double diametroMoneda = Double.parseDouble(diametroMonedaStr.replaceAll("[^\\d.]", ""));
+                        System.out.print("Ingrese el grosor (e.g., 2mm): ");
+                        String grosorMonedaStr = scanner.next();
+                        double grosorMoneda = Double.parseDouble(grosorMonedaStr.replaceAll("[^\\d.]", ""));
                         System.out.print("Ingrese el estado de conservación (G, VG, F, VF, XF, AU, UNC): ");
                         String estadoConservacionMonedaStr = scanner.next();
                         EstadoConservacionMoneda estadoConservacionMoneda = EstadoConservacionMoneda.valueOf(estadoConservacionMonedaStr);
@@ -60,7 +63,7 @@ public class Main {
                         System.out.println("Moneda añadida con éxito.");
                     } catch (InputMismatchException e) {
                         System.out.println("Error: Entrada inválida. Por favor, ingrese los datos correctamente.");
-                        scanner.next(); // Clear the invalid input
+                        scanner.next();
                     }
                     break;
                 case 2:
