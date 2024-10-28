@@ -35,12 +35,10 @@ public class Main {
                         String autoridadGobernanteMoneda = scanner.nextLine();
                         System.out.print("Ingrese el año: ");
                         int annusMoneda = scanner.nextInt();
-                        scanner.nextLine(); // Consume the newline
-                        System.out.print("Ingrese el valor (e.g., 10€): ");
-                        String valorMonedaStr = scanner.nextLine();
-                        double valorMoneda = Double.parseDouble(valorMonedaStr.replaceAll("[^\\d.]", ""));
+                        System.out.print("Ingrese el valor: ");
+                        double valorMoneda = scanner.nextDouble();
                         System.out.print("Ingrese la unidad monetaria: ");
-                        String unidadMonetariaMoneda = scanner.nextLine();
+                        String unidadMonetariaMoneda = scanner.next();
                         System.out.print("Ingrese la rareza (1-100): ");
                         int rarezaMoneda = scanner.nextInt();
                         System.out.print("Ingrese el precio: ");
@@ -53,9 +51,8 @@ public class Main {
                         System.out.print("Ingrese el diámetro (e.g., 10cm): ");
                         String diametroMonedaStr = scanner.next();
                         double diametroMoneda = Double.parseDouble(diametroMonedaStr.replaceAll("[^\\d.]", ""));
-                        System.out.print("Ingrese el grosor (e.g., 2mm): ");
-                        String grosorMonedaStr = scanner.next();
-                        double grosorMoneda = Double.parseDouble(grosorMonedaStr.replaceAll("[^\\d.]", ""));
+                        System.out.print("Ingrese el grosor: ");
+                        double grosorMoneda = scanner.nextDouble();
                         System.out.print("Ingrese el estado de conservación (G, VG, F, VF, XF, AU, UNC): ");
                         String estadoConservacionMonedaStr = scanner.next();
                         EstadoConservacionMoneda estadoConservacionMoneda = EstadoConservacionMoneda.valueOf(estadoConservacionMonedaStr);
@@ -76,12 +73,10 @@ public class Main {
                         String autoridadGobernanteSello = scanner.nextLine();
                         System.out.print("Ingrese el año: ");
                         int annusSello = scanner.nextInt();
-                        scanner.nextLine(); // Consume the newline
-                        System.out.print("Ingrese el valor (e.g., 10€): ");
-                        String valorSelloStr = scanner.nextLine();
-                        double valorSello = Double.parseDouble(valorSelloStr.replaceAll("[^\\d.]", ""));
+                        System.out.print("Ingrese el valor: ");
+                        double valorSello = scanner.nextDouble();
                         System.out.print("Ingrese la unidad monetaria: ");
-                        String unidadMonetariaSello = scanner.nextLine();
+                        String unidadMonetariaSello = scanner.next();
                         System.out.print("Ingrese la rareza (1-100): ");
                         int rarezaSello = scanner.nextInt();
                         System.out.print("Ingrese el precio: ");
