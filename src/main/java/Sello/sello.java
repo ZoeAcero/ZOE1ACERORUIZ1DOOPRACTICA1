@@ -50,4 +50,21 @@ public class sello extends ElementoColeccionable{
     public void setEstadoConservacion(EstadoConservacionSello estadoConservacion) {
         this.estadoConservacion = estadoConservacion;
     }
+
+    @Override
+    public String toString() {
+        return "Sello{" +
+                "pais='" + getPais() + '\'' +
+                ", autoridadGobernante='" + getAutoridadGobernante() + '\'' +
+                ", annus=" + getAnnus() +
+                ", valor=" + getValor() +
+                ", unidadMonetaria='" + getUnidadMonetaria() + '\'' +
+                ", rareza=" + getRareza() +
+                ", precio=" + getPrecio() +
+                ", altura=" + altura +
+                ", anchura=" + anchura +
+                ", imagen='" + imagen + '\'' +
+                ", estadoConservacion=" + estadoConservacion +
+                '}';
+    }
 }
