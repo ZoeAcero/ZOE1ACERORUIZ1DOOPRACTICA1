@@ -6,10 +6,10 @@ import Sello.sello;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Coleccion {
+public class coleccion {
     private List<ElementoColeccionable> elementos;
 
-    public Coleccion() {
+    public coleccion() {
         this.elementos = new ArrayList<>();
     }
 
@@ -28,34 +28,6 @@ public class Coleccion {
             }
         }
     }
-
-    public void mostrarSellos() {
-        for (ElementoColeccionable elemento : elementos) {
-            if (elemento instanceof sello) {
-                System.out.println(elemento);
-            }
-        }
-    }
-
-    public double obtenerPrecioTotal() {
-        double total = 0;
-        for (ElementoColeccionable elemento : elementos) {
-            total += elemento.getPrecio();
-        }
-        return total;
-    }
-
-    public double obtenerRarezaMedia() {
-        if (elementos.isEmpty()) {
-            return 0;
-        }
-        double totalRareza = 0;
-        for (ElementoColeccionable elemento : elementos) {
-            totalRareza += elemento.getRareza();
-        }
-        return totalRareza / elementos.size();
-    }
-}
 
     public void mostrarSellos() {
         for (ElementoColeccionable elemento : elementos) {
