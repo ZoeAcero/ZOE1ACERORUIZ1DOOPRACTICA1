@@ -34,35 +34,37 @@ public class Main {
                         System.out.print("Ingrese la autoridad gobernante: ");
                         String autoridadGobernanteMoneda = scanner.nextLine();
                         System.out.print("Ingrese el año: ");
-                        int annusMoneda = scanner.nextInt();
-                        System.out.print("Ingrese el valor: ");
-                        double valorMoneda = scanner.nextDouble();
+                        int annusMoneda = Integer.parseInt(scanner.nextLine());
+                        System.out.print("Ingrese el valor (e.g., 10€): ");
+                        String valorMonedaStr = scanner.nextLine();
+                        double valorMoneda = Double.parseDouble(valorMonedaStr.replaceAll("[^\\d.]", ""));
                         System.out.print("Ingrese la unidad monetaria: ");
-                        String unidadMonetariaMoneda = scanner.next();
+                        String unidadMonetariaMoneda = scanner.nextLine();
                         System.out.print("Ingrese la rareza (1-100): ");
-                        int rarezaMoneda = scanner.nextInt();
-                        System.out.print("Ingrese el precio: ");
-                        double precioMoneda = scanner.nextDouble();
+                        int rarezaMoneda = Integer.parseInt(scanner.nextLine());
+                        System.out.print("Ingrese el precio (e.g., 10€): ");
+                        String precioMonedaStr = scanner.nextLine();
+                        double precioMoneda = Double.parseDouble(precioMonedaStr.replaceAll("[^\\d.]", ""));
                         System.out.print("Ingrese la composición: ");
-                        String composicionMoneda = scanner.next();
+                        String composicionMoneda = scanner.nextLine();
                         System.out.print("Ingrese el peso (e.g., 5kg): ");
-                        String pesoMonedaStr = scanner.next();
+                        String pesoMonedaStr = scanner.nextLine();
                         double pesoMoneda = Double.parseDouble(pesoMonedaStr.replaceAll("[^\\d.]", ""));
                         System.out.print("Ingrese el diámetro (e.g., 10cm): ");
-                        String diametroMonedaStr = scanner.next();
+                        String diametroMonedaStr = scanner.nextLine();
                         double diametroMoneda = Double.parseDouble(diametroMonedaStr.replaceAll("[^\\d.]", ""));
-                        System.out.print("Ingrese el grosor: ");
-                        double grosorMoneda = scanner.nextDouble();
+                        System.out.print("Ingrese el grosor (e.g., 2mm): ");
+                        String grosorMonedaStr = scanner.nextLine();
+                        double grosorMoneda = Double.parseDouble(grosorMonedaStr.replaceAll("[^\\d.]", ""));
                         System.out.print("Ingrese el estado de conservación (G, VG, F, VF, XF, AU, UNC): ");
-                        String estadoConservacionMonedaStr = scanner.next();
+                        String estadoConservacionMonedaStr = scanner.nextLine();
                         EstadoConservacionMoneda estadoConservacionMoneda = EstadoConservacionMoneda.valueOf(estadoConservacionMonedaStr);
 
                         moneda nuevaMoneda = new moneda(paisMoneda, autoridadGobernanteMoneda, annusMoneda, valorMoneda, unidadMonetariaMoneda, rarezaMoneda, precioMoneda, composicionMoneda, pesoMoneda, diametroMoneda, grosorMoneda, estadoConservacionMoneda);
                         coleccion.anadirMoneda(nuevaMoneda);
                         System.out.println("Moneda añadida con éxito.");
-                    } catch (InputMismatchException e) {
+                    } catch (InputMismatchException | NumberFormatException e) {
                         System.out.println("Error: Entrada inválida. Por favor, ingrese los datos correctamente.");
-                        scanner.next(); // Clear the invalid input
                     }
                     break;
                 case 2:
@@ -72,31 +74,32 @@ public class Main {
                         System.out.print("Ingrese la autoridad gobernante: ");
                         String autoridadGobernanteSello = scanner.nextLine();
                         System.out.print("Ingrese el año: ");
-                        int annusSello = scanner.nextInt();
-                        System.out.print("Ingrese el valor: ");
-                        double valorSello = scanner.nextDouble();
+                        int annusSello = Integer.parseInt(scanner.nextLine());
+                        System.out.print("Ingrese el valor (e.g., 10€): ");
+                        String valorSelloStr = scanner.nextLine();
+                        double valorSello = Double.parseDouble(valorSelloStr.replaceAll("[^\\d.]", ""));
                         System.out.print("Ingrese la unidad monetaria: ");
-                        String unidadMonetariaSello = scanner.next();
+                        String unidadMonetariaSello = scanner.nextLine();
                         System.out.print("Ingrese la rareza (1-100): ");
-                        int rarezaSello = scanner.nextInt();
-                        System.out.print("Ingrese el precio: ");
-                        double precioSello = scanner.nextDouble();
+                        int rarezaSello = Integer.parseInt(scanner.nextLine());
+                        System.out.print("Ingrese el precio (e.g., 10€): ");
+                        String precioSelloStr = scanner.nextLine();
+                        double precioSello = Double.parseDouble(precioSelloStr.replaceAll("[^\\d.]", ""));
                         System.out.print("Ingrese la altura: ");
-                        double alturaSello = scanner.nextDouble();
+                        double alturaSello = Double.parseDouble(scanner.nextLine());
                         System.out.print("Ingrese la anchura: ");
-                        double anchuraSello = scanner.nextDouble();
+                        double anchuraSello = Double.parseDouble(scanner.nextLine());
                         System.out.print("Ingrese la imagen: ");
-                        String imagenSello = scanner.next();
+                        String imagenSello = scanner.nextLine();
                         System.out.print("Ingrese el estado de conservación (U, NSG, NF, N): ");
-                        String estadoConservacionSelloStr = scanner.next();
+                        String estadoConservacionSelloStr = scanner.nextLine();
                         EstadoConservacionSello estadoConservacionSello = EstadoConservacionSello.valueOf(estadoConservacionSelloStr);
 
                         sello nuevoSello = new sello(paisSello, autoridadGobernanteSello, annusSello, valorSello, unidadMonetariaSello, rarezaSello, precioSello, alturaSello, anchuraSello, imagenSello, estadoConservacionSello);
                         coleccion.anadirSello(nuevoSello);
                         System.out.println("Sello añadido con éxito.");
-                    } catch (InputMismatchException e) {
+                    } catch (InputMismatchException | NumberFormatException e) {
                         System.out.println("Error: Entrada inválida. Por favor, ingrese los datos correctamente.");
-                        scanner.next(); // Clear the invalid input
                     }
                     break;
                 case 3:
