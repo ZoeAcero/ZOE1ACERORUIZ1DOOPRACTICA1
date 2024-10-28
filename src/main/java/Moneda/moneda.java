@@ -59,4 +59,22 @@ public class moneda extends ElementoColeccionable {
         this.estadoConservacion = estadoConservacion;
     }
 
+    @Override
+    public String toString() {
+        return "Moneda{" +
+                "pais='" + getPais() + '\'' +
+                ", autoridadGobernante='" + getAutoridadGobernante() + '\'' +
+                ", annus=" + getAnnus() +
+                ", valor=" + getValor() +
+                ", unidadMonetaria='" + getUnidadMonetaria() + '\'' +
+                ", rareza=" + getRareza() +
+                ", precio=" + getPrecio() +
+                ", composicion='" + composicion + '\'' +
+                ", peso=" + peso +
+                ", diametro=" + diametro +
+                ", grosor=" + grosor +
+                ", estadoConservacion=" + estadoConservacion +
+                '}';
+    }
+
 }
