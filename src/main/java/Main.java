@@ -123,7 +123,7 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Error: Entrada inválida. Por favor, ingrese un número.");
-                scanner.next(); // Clear the invalid input
+                scanner.next(); 
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
