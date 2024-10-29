@@ -1,6 +1,6 @@
 package Elemento_Coleccionable;
 
-public class ElementoColeccionable {
+public abstract class ElementoColeccionable {
     private String pais;
     private String autoridadGobernante;
     private int annus;
@@ -78,5 +78,4 @@ public class ElementoColeccionable {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-    
 }
