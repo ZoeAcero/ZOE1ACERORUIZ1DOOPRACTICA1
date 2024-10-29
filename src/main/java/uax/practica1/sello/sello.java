@@ -1,7 +1,7 @@
-package uax_practica1_sello;
+package uax.practica1.sello;
 
-import uax_practica1_elemento_coleccionable.ElementoColeccionable;
-import uax_practica1_enums.EstadoConservacionSello;
+import uax.practica1.elemento_coleccionable.ElementoColeccionable;
+import uax.practica1.enums.EstadoConservacionSello;
 
 public class sello extends ElementoColeccionable {
 

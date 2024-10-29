@@ -1,9 +1,9 @@
 import java.util.Scanner;
-import uax_parctica1_coleccion.coleccion;
-import uax_practica1_moneda.moneda;
-import uax_practica1_sello.sello;
-import uax_practica1_enums.EstadoConservacionMoneda;
-import uax_practica1_enums.EstadoConservacionSello;
+import uax.practica1.coleccion.coleccion;
+import uax.practica1.moneda.moneda;
+import uax.practica1.sello.sello;
+import uax.practica1.enums.EstadoConservacionMoneda;
+import uax.practica1.enums.EstadoConservacionSello;
 import java.util.InputMismatchException;
 
 public class Main {

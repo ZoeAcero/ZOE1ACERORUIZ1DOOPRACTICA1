@@ -1,4 +1,4 @@
-package uax_practica1_elemento_coleccionable;
+package uax.practica1.elemento_coleccionable;
 
 public abstract class ElementoColeccionable {
     // Atributos de la clase

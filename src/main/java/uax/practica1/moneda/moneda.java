@@ -1,7 +1,7 @@
-package uax_practica1_moneda;
+package uax.practica1.moneda;
 
-import uax_practica1_elemento_coleccionable.ElementoColeccionable;
-import uax_practica1_enums.EstadoConservacionMoneda;
+import uax.practica1.elemento_coleccionable.ElementoColeccionable;
+import uax.practica1.enums.EstadoConservacionMoneda;
 
 public class moneda extends ElementoColeccionable {
     // Atributos específicos de la clase Moneda
