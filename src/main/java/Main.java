@@ -8,11 +8,13 @@ import java.util.InputMismatchException;
 
 public class Main {
     public static void main(String[] args) {
+        // Crear una nueva colección
         coleccion coleccion = new coleccion();
         Scanner scanner = new Scanner(System.in);
         int opcion = -1;
 
         do {
+            // Mostrar el menú
             System.out.println("Menú:");
             System.out.println("1-Añadir una nueva moneda");
             System.out.println("2-Añadir un nuevo sello");
@@ -24,11 +26,13 @@ public class Main {
             System.out.print("Seleccione una opción: ");
 
             try {
+                // Leer la opción del usuario
                 opcion = scanner.nextInt();
-                scanner.nextLine();
+                scanner.nextLine(); // Consumir el salto de línea
 
                 switch (opcion) {
                     case 1:
+                        // Añadir una nueva moneda
                         try {
                             System.out.print("Ingrese el país: ");
                             String paisMoneda = scanner.nextLine();
@@ -61,6 +65,7 @@ public class Main {
                             String estadoConservacionMonedaStr = scanner.nextLine();
                             EstadoConservacionMoneda estadoConservacionMoneda = EstadoConservacionMoneda.valueOf(estadoConservacionMonedaStr);
 
+                            // Crear y añadir la nueva moneda a la colección
                             moneda nuevaMoneda = new moneda(paisMoneda, autoridadGobernanteMoneda, annusMoneda, valorMoneda, unidadMonetariaMoneda, rarezaMoneda, precioMoneda, composicionMoneda, pesoMoneda, diametroMoneda, grosorMoneda, estadoConservacionMoneda);
                             coleccion.anadirMoneda(nuevaMoneda);
                             System.out.println("Moneda añadida con éxito.");
@@ -69,6 +74,7 @@ public class Main {
                         }
                         break;
                     case 2:
+                        // Añadir un nuevo sello
                         try {
                             System.out.print("Ingrese el país: ");
                             String paisSello = scanner.nextLine();
@@ -96,6 +102,7 @@ public class Main {
                             String estadoConservacionSelloStr = scanner.nextLine();
                             EstadoConservacionSello estadoConservacionSello = EstadoConservacionSello.valueOf(estadoConservacionSelloStr);
 
+                            // Crear y añadir el nuevo sello a la colección
                             sello nuevoSello = new sello(paisSello, autoridadGobernanteSello, annusSello, valorSello, unidadMonetariaSello, rarezaSello, precioSello, alturaSello, anchuraSello, imagenSello, estadoConservacionSello);
                             coleccion.anadirSello(nuevoSello);
                             System.out.println("Sello añadido con éxito.");
@@ -104,31 +111,40 @@ public class Main {
                         }
                         break;
                     case 3:
+                        // Mostrar todas las monedas
                         coleccion.mostrarMonedas();
                         break;
                     case 4:
+                        // Mostrar todos los sellos
                         coleccion.mostrarSellos();
                         break;
                     case 5:
+                        // Mostrar el precio total de la colección
                         System.out.println("Precio total de la colección: " + coleccion.obtenerPrecioTotal());
                         break;
                     case 6:
+                        // Mostrar la rareza media de la colección
                         System.out.println("Rareza media de la colección: " + coleccion.obtenerRarezaMedia());
                         break;
                     case 0:
+                        // Salir del programa
                         System.out.println("Saliendo...");
                         break;
                     default:
+                        // Manejar opción no válida
                         throw new IllegalArgumentException("Opción no válida.");
                 }
             } catch (InputMismatchException e) {
+                // Manejar entrada inválida
                 System.out.println("Error: Entrada inválida. Por favor, ingrese un número.");
-                scanner.next();
+                scanner.next(); // Limpiar la entrada inválida
             } catch (IllegalArgumentException e) {
+                // Mostrar mensaje de error para opción no válida
                 System.out.println(e.getMessage());
             }
         } while (opcion != 0);
 
+        // Cerrar el escáner
         scanner.close();
     }
 }
