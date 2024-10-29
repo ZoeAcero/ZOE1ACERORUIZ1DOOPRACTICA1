@@ -1,6 +1,7 @@
 package uax_practica1_elemento_coleccionable;
 
 public abstract class ElementoColeccionable {
+    // Atributos de la clase
     private String pais;
     private String autoridadGobernante;
     private int annus;
@@ -9,7 +10,9 @@ public abstract class ElementoColeccionable {
     private int rareza;
     private double precio;
 
+    // Constructor de la clase
     public ElementoColeccionable(String pais, String autoridadGobernante, int annus, double valor, String unidadMonetaria, int rareza, double precio) {
+        // Validar que la rareza esté en el rango permitido
         if (rareza < 1 || rareza > 100) {
             throw new IllegalArgumentException("El índice de rareza debe estar entre 1 y 100.");
         }
