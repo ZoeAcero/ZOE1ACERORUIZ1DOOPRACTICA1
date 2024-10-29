@@ -25,7 +25,7 @@ public class Main {
 
             try {
                 opcion = scanner.nextInt();
-                scanner.nextLine(); // Consume the newline
+                scanner.nextLine();
 
                 switch (opcion) {
                     case 1:
@@ -123,7 +123,7 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Error: Entrada inválida. Por favor, ingrese un número.");
-                scanner.next(); 
+                scanner.next();
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
