@@ -1,4 +1,4 @@
-package uax.parctica1.coleccion;
+package uax_parctica1_coleccion;
 
 import uax_practica1_elemento_coleccionable.ElementoColeccionable;
 import uax_practica1_moneda.moneda;

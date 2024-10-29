@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import uax.parctica1.coleccion.coleccion;
+import uax_parctica1_coleccion.coleccion;
 import uax_practica1_moneda.moneda;
 import uax_practica1_sello.sello;
 import uax_practica1_enums.EstadoConservacionMoneda;
