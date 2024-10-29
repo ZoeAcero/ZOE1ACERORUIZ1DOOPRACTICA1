@@ -1,8 +1,8 @@
-package Coleccion;
+package uax.parctica1.coleccion;
 
-import Elemento_Coleccionable.ElementoColeccionable;
-import Moneda.moneda;
-import Sello.sello;
+import uax_practica1_elemento_coleccionable.ElementoColeccionable;
+import uax_practica1_moneda.moneda;
+import uax_practica1_sello.sello;
 import java.util.ArrayList;
 import java.util.List;
 

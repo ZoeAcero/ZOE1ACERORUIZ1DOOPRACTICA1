@@ -1,6 +1,6 @@
-package Moneda;
-import Elemento_Coleccionable.ElementoColeccionable;
-import Enums.EstadoConservacionMoneda;
+package uax_practica1_moneda;
+import uax_practica1_elemento_coleccionable.ElementoColeccionable;
+import uax_practica1_enums.EstadoConservacionMoneda;
 public class moneda extends ElementoColeccionable {
     private String composicion;
     private double peso;
